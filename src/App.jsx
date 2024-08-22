@@ -81,8 +81,8 @@ function App() {
         <div className="addTodo my-5 flex flex-col gap-2">
           <h2 className='text-2xl font-bold'>Add a Todo</h2>
           <div className="flex">
-          <input className='text-black w-full rounded-lg p-2' onChange={handleChange} value={todo} type="text"  />
-          <button onClick={handleAdd} disabled={todo.length <= 3} className='disabled:bg-emerald-300 bg-emerald-500 hover:bg-emerald-800 text-sm font-bold p-4 py-2 mx-2 text-white rounded-full'>Save</button>
+            <input className='text-black w-full rounded-lg p-2' onChange={handleChange} value={todo} type="text" />
+            <button onClick={handleAdd} disabled={todo.length <= 3} className='disabled:bg-emerald-300 bg-emerald-500 hover:bg-emerald-800 text-sm font-bold p-4 py-2 mx-2 text-white rounded-full'>Save</button>
           </div>
         </div>
         <input className='my-4' id='show' onChange={toggleFinished} type="checkbox" checked={showFinished} />
@@ -96,7 +96,7 @@ function App() {
             //show finished checkbox condition
             return (showFinished || !item.isCompleted) && <div key={item.id} className="todo flex my-3 justify-between">
               <div className='flex gap-5'>
-                <input  name={item.id} onChange={handleCheckbox} type="checkbox" checked={item.isCompleted} id="" />
+                <input name={item.id} onChange={handleCheckbox} type="checkbox" checked={item.isCompleted} id="" />
                 <div className={item.isCompleted ? "line-through" : ""}>{item.todo}</div>
               </div>
               <div className="buttons flex h-full">
